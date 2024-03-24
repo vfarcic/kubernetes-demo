@@ -5,7 +5,8 @@
     "bat@0.24.0",
     "viddy@0.4.0",
     "kubectl-tree@0.4.3",
-    "kubernetes-helm@3.14.3"
+    "kubernetes-helm@3.14.3",
+    "yq-go@4.42.1"
   ],
   "shell": {
     "init_hook": [

@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: silly-demo
 spec:
-  replicas: 5
+  replicas: 2
   minReadySeconds: 10
   updateStrategy:
     rollingUpdate:
@@ -49,10 +49,3 @@ spec:
         resources:
           requests:
             storage: 1Gi
-
-    # - metadata:
-    #     name: silly-cache
-    #   spec:
-    # - name: silly-cache
-    #   persistentVolumeClaim:
-    #     claimName: silly-claim
