@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: silly-demo
 spec:
-  replicas: 5
+  replicas: 2
   minReadySeconds: 10
   strategy:
     rollingUpdate:
@@ -20,8 +20,11 @@ spec:
         app.kubernetes.io/name: silly-demo
     spec:
       containers:
-        - image: ghcr.io/vfarcic/silly-demo:1.4.116
+        - image: ghcr.io/vfarcic/silly-demo:1.4.123
           name: silly-demo
+          env:
+            - name: DEBUG
+              value: "true"
           ports:
             - containerPort: 8080    
           readinessProbe:
