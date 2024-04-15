@@ -7,7 +7,9 @@
     "kubectl-tree@0.4.3",
     "kubernetes-helm@3.14.3",
     "yq-go@4.42.1",
-    "jq@1.7.1"
+    "jq@1.7.1",
+    "google-cloud-sdk@452.0.1",
+    "path:gcloud#google-cloud-sdk"
   ],
   "shell": {
     "init_hook": [
