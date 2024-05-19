@@ -1,16 +1,16 @@
+---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: silly-demo
   labels:
     app.kubernetes.io/name: silly-demo
 spec:
-  replicas: 5
+  replicas: 2
   minReadySeconds: 10
-  strategy:
+  updateStrategy:
     rollingUpdate:
       maxUnavailable: 1
-      maxSurge: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: silly-demo
@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: silly-demo
     spec:
       containers:
-        - image: ghcr.io/vfarcic/silly-demo:1.4.116
+        - image: ghcr.io/vfarcic/silly-demo:1.4.117
           name: silly-demo
           ports:
             - containerPort: 8080    
@@ -35,3 +35,17 @@ spec:
             requests:
               cpu: 125m
               memory: 128Mi
+          volumeMounts:
+          - mountPath: /cache
+            name: silly-claim
+  volumeClaimTemplates:
+    - apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: silly-claim
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi

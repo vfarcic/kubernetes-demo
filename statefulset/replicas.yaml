@@ -49,10 +49,3 @@ spec:
         resources:
           requests:
             storage: 1Gi
-
-    # - metadata:
-    #     name: silly-cache
-    #   spec:
-    # - name: silly-cache
-    #   persistentVolumeClaim:
-    #     claimName: silly-claim

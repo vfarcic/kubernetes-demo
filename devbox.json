@@ -6,10 +6,17 @@
     "viddy@0.4.0",
     "kubectl-tree@0.4.3",
     "kubernetes-helm@3.14.3",
+<<<<<<< HEAD
     "path:gcloud#google-cloud-sdk",
     "google-cloud-sdk@475.0.0",
     "gum@0.14.0",
     "jq@1.7.1"
+=======
+    "yq-go@4.42.1",
+    "jq@1.7.1",
+    "google-cloud-sdk@452.0.1",
+    "path:gcloud#google-cloud-sdk"
+>>>>>>> 7a29b47451def070b07f8b7ff94c941158d7c238
   ],
   "shell": {
     "init_hook": [
