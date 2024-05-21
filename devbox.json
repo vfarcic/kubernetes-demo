@@ -9,7 +9,12 @@
     "path:gcloud#google-cloud-sdk",
     "google-cloud-sdk@475.0.0",
     "gum@0.14.0",
-    "jq@1.7.1"
+    "jq@1.7.1",
+    "yq-go@4.44.1",
+    "timoni@0.21.0",
+    "eksctl@0.177.0",
+    "teller@1.5.6",
+    "awscli2@2.15.43"
   ],
   "shell": {
     "init_hook": [

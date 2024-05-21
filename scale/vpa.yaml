@@ -1,11 +1,11 @@
 apiVersion: autoscaling.k8s.io/v1
 kind: VerticalPodAutoscaler
 metadata:
-  name: jenkins
+  name: silly-demo
 spec:
   targetRef:
     apiVersion: apps/v1
-    kind: StatefulSet
-    name: jenkins
+    kind: Deployment
+    name: silly-demo
   updatePolicy:
     updateMode: Auto
