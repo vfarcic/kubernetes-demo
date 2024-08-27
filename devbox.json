@@ -14,13 +14,11 @@
     "timoni@0.21.0",
     "eksctl@0.177.0",
     "teller@1.5.6",
-    "awscli2@2.15.43"
+    "awscli2@2.15.43",
+    "nushell@0.97.1"
   ],
   "shell": {
-    "init_hook": [
-      "alias cat='bat --paging never --theme DarkNeon --style plain'",
-      "PS1=\"➜ \""
-    ],
-    "scripts": {}
+    "init_hook": [],
+    "scripts":   {}
   }
 }
