@@ -1,3 +1,6 @@
-hyperscaler: aws
+hyperscaler: azure
 google:
   projectId: dot-20240827124409
+azure:
+  resourceGroup: dot-20240828163206
+  location: eastus

@@ -14,4 +14,23 @@ if $hyperscaler == "google" {
 
     gcloud projects delete $project_id --quiet
 
+} else if $hyperscaler == "aws" {
+
+    eksctl delete cluster --config-file eksctl.yaml
+
+} else {
+
+    let resource_group = open settings.yaml
+        | get azure.resourceGroup
+    let location = open settings.yaml | get azure.location
+
+    (
+        az aks delete --resource-group $resource_group --name dot
+            --yes
+    )
+
+    az group delete --name $resource_group --yes
+
 }
+
+rm --force kubeconfig.yaml

@@ -14,8 +14,10 @@
     "timoni@0.21.0",
     "eksctl@0.189.0",
     "teller@2.0.7",
+    "azure-cli@2.63.0",
     "awscli2@2.15.43",
-    "nushell@0.97.1"
+    "nushell@0.97.1",
+    "zellij@0.40.1"
   ],
   "shell": {
     "init_hook": [],

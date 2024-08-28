@@ -5,9 +5,9 @@ metadata:
   labels:
     app.kubernetes.io/name: silly-demo
 spec:
-  storageClassName: standard
+  storageClassName: managed
   resources:
     requests:
       storage: 1Gi
   accessModes:
-    - ReadWriteOnce
+  - ReadWriteOnce
